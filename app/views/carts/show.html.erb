@@ -50,8 +50,6 @@
   </div>
   <% else %>
     <div class="alert alert-success" role="alert">No items in Cart yet, how about we change that?</div>
-    <button class="btn btn-success " type="submit">
-       Back to Shop
-    </button>
+    <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-success' %>
   <% end %>      
 </section>
