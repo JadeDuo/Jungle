@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if cart.size > 0 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +48,10 @@
       <% end %>
     </div>
   </div>
-
+  <% else %>
+    <div class="alert alert-success" role="alert">No items in Cart yet, how about we change that?</div>
+    <button class="btn btn-success " type="submit">
+       Back to Shop
+    </button>
+  <% end %>      
 </section>
