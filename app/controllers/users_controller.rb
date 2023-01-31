@@ -11,6 +11,8 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       redirect_to '/signup'
+      flash.alert = @user.errors.full_messages
+    
     end
   end
 

@@ -1,5 +1,15 @@
 <h1>Join Jungle</h1>
 
+<% flash.each do |type, msg| %>
+  <div>
+    <% msg.each do |err| %>
+      <div class="alert alert-danger" role="alert">
+      <%= err %>
+    </div>
+    <% end%>  
+  </div>
+<% end %>
+
 <%= bootstrap_form_for :user, url: '/users' do |f| %>
 
   <%= f.text_field :first_name %>
