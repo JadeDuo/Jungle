@@ -11,6 +11,6 @@ describe('Loads Jungle and displays products', () => {
 
     cy.get(':nth-child(1) > div > .button_to > .btn').click()
     
-    cy.contains('My Cart (1)')
+    cy.contains('My Cart (1)').should("be.visible")
   });
 })
